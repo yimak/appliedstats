@@ -30,3 +30,22 @@ ax.plot(x,y);
 
 
 
+
+
+
+
+
+# Perform paired t-test
+t_stat, p_value = stats.ttest_ind(before, after)
+
+# Display results
+print(f"T-statistic: {t_stat}")
+print(f"P-value: {p_value}")
+
+alpha = 0.05
+if p_value < alpha:
+    print("Reject the null hypothesis; there is a significant difference between the before and after.")
+else:
+    print("Fail to reject the null hypothesis; there is no significant difference between before and after.")
+
+
